@@ -7,6 +7,15 @@ A simple and secure encryption tool that works entirely in your browser.
 
 **LockText** is a web application that allows you to securely encrypt and decrypt text data. All operations are performed entirely in the browser, and no data or passwords are sent to the server. It provides a simple yet powerful solution for protecting and securely sharing sensitive information.
 
+## **History**
+
+History
+In today's world, there are numerous cloud platforms for document management that are not only highly functional but also aesthetically pleasing and convenient. However, I felt hesitant to entrust these platforms with my plaintext passwords and sensitive data. Therefore, I sought a solution where I could securely store confidential data on a cloud platform at a low cost.
+
+That said, if such a solution became reliant on vendor lock-in, it could potentially lead to disadvantages for users if the project could no longer continue. Since encryption and decryption can be implemented with basic JavaScript functions in the browser, by making the format publicly available, we can rest assured that even if the project encounters issues, the time will soon come when AI will be able to build user interfaces efficiently and resolve these issues with ease.
+
+With this in mind, I prioritized leaving behind the data format and the minimum necessary framework, and with the help of generative AI, I launched this project in a very short time.
+
 ## **Main Features**
 
 - **Complete Privacy Protection**: No data or passwords are sent to the server.
