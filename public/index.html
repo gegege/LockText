@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>LockText</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>LockText</h1>
+
+<!-- 暗号化セクション -->
+<section id="encryption-section">
+    <h2>暗号化</h2>
+    <textarea id="plaintext" placeholder="暗号化したいテキストを入力"></textarea>
+    <input type="password" id="password" placeholder="パスワードを入力">
+    <input type="password" id="password-confirm" placeholder="パスワードを再入力">
+    <button id="encrypt-button">暗号化してダウンロード</button>
+</section>
+
+<!-- 復号セクション -->
+<section id="decryption-section">
+    <h2>復号</h2>
+    <input type="file" id="encrypted-file">
+    <input type="password" id="decrypt-password" placeholder="パスワードを入力">
+    <button id="decrypt-button">ファイルを復号</button>
+    <div id="decrypted-text"></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
