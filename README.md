@@ -133,7 +133,7 @@ LockText/
 
 ご質問やご提案がありましたら、以下の方法でご連絡ください。
 
-- **メール**: your-email@example.com
+- **メール**: ur68x6716@mozmail.com
 - **GitHub Issues**: [リポジトリのIssuesページ](https://github.com/gegege/LockText/issues)
 
 ---
