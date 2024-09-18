@@ -1,71 +1,71 @@
 
 # **LockText**
 
-ブラウザ上で完結するシンプルで安全な暗号化ツール
+A simple and secure encryption tool that works entirely in your browser.
 
-## **概要**
+## **Overview**
 
-**LockText**は、テキストデータを安全に暗号化・復号できるウェブアプリケーションです。すべての処理はブラウザ内で完結し、データやパスワードがサーバーに送信されることはありません。機密情報の保護や安全な共有が必要な場面で、シンプルかつ強力なソリューションを提供します。
+**LockText** is a web application that allows you to securely encrypt and decrypt text data. All operations are performed entirely in the browser, and no data or passwords are sent to the server. It provides a simple yet powerful solution for protecting and securely sharing sensitive information.
 
-## **主な特徴**
+## **Main Features**
 
-- **完全なプライバシー保護**: データとパスワードは一切サーバーに送信されません。
-- **強力な暗号化**: 業界標準のAES-256-GCMアルゴリズムを使用。
-- **使いやすいインターフェース**: シンプルで直感的なデザイン。
-- **クロスプラットフォーム**: モダンなウェブブラウザがあれば、OSを問わず利用可能。
-- **オープンソース**: ソースコードを公開し、透明性と信頼性を確保。
+- **Complete Privacy Protection**: No data or passwords are sent to the server.
+- **Strong Encryption**: Utilizes the industry-standard AES-256-GCM algorithm.
+- **User-Friendly Interface**: Simple and intuitive design.
+- **Cross-Platform**: Works on any modern web browser, regardless of the operating system.
+- **Open Source**: The source code is available for transparency and trust.
 
-## **デモサイト**
+## **Demo Site**
 
-[LockText デモサイト](https://gegege.github.io/LockText/)  
+[LockText Demo Site](https://gegege.github.io/LockText/)
 
-## **始め方**
+## **How to Get Started**
 
-### **1. リポジトリをクローン**
+### **1. Clone the Repository**
 
 ```bash
 git clone https://github.com/gegege/LockText.git
 ```
 
-### **2. ローカルサーバーの起動**
+### **2. Start a Local Server**
 
-#### **方法1: VSCodeのLive Serverを使用**
+#### **Method 1: Use VSCode Live Server**
 
-1. VSCodeでプロジェクトを開く。
-2. `public/index.html`を開き、右下の「Go Live」をクリック。
+1. Open the project in VSCode.
+2. Open `public/index.html` and click "Go Live" at the bottom-right.
 
-#### **方法2: Pythonの簡易HTTPサーバーを使用**
+#### **Method 2: Use Python Simple HTTP Server**
 
 ```bash
 cd public
 python3 -m http.server 8000
 ```
 
-ブラウザで`http://localhost:8000`にアクセス。
+Access `http://localhost:8000` in your browser.
 
-### **3. アプリケーションの利用**
+### **3. Use the Application**
 
-ブラウザでアプリケーションにアクセスし、以下の手順で暗号化・復号を行います。
+Access the application in your browser and follow the steps below to encrypt or decrypt data.
 
-## **使い方**
+## **How to Use**
 
-### **暗号化**
+### **Encryption**
 
-1. **テキスト入力**: 暗号化したいテキストを入力します。
-2. **パスワード設定**: パスワードを入力し、確認のため再度入力します。
-3. **暗号化**: 「暗号化してダウンロード」ボタンをクリックします。
-4. **ファイル保存**: 暗号化されたファイル（例: `locktext.json`）がダウンロードされます。
+1. **Enter Text**: Input the text you want to encrypt.
+2. **Set Password**: Enter a password and confirm it.
+3. **Encrypt**: Click the "Encrypt and Download" button.
+4. **Save File**: The encrypted file (e.g., `locktext.json`) will be downloaded.
 
-### **復号**
+### **Decryption**
 
-1. **ファイル選択**: 復号したい暗号化ファイルを選択します。
-2. **パスワード入力**: 暗号化時に設定したパスワードを入力します。
-3. **復号**: 「ファイルを復号」ボタンをクリックします。
-4. **テキスト表示**: 復号されたテキストが画面に表示されます。
+1. **Select File**: Choose the encrypted file you want to decrypt.
+2. **Enter Password**: Input the password you set during encryption.
+3. **Decrypt**: Click the "Decrypt File" button.
+4. **View Text**: The decrypted text will be displayed on the screen.
 
-## **データフォーマット**
+## **Data Format**
 
-暗号化されたファイルは以下のJSON形式で保存されます。
+The encrypted file is saved in the following JSON format:
 
 ```json
 {
@@ -74,68 +74,68 @@ python3 -m http.server 8000
     "encryptionAlgorithm": "AES-256-GCM",
     "keyDerivationFunction": "PBKDF2",
     "kdfIterations": 100000,
-    "salt": "Base64エンコードされたソルト",
-    "initializationVector": "Base64エンコードされたIV",
-    "timestamp": "ISO 8601形式のタイムスタンプ"
+    "salt": "Base64 encoded salt",
+    "initializationVector": "Base64 encoded IV",
+    "timestamp": "ISO 8601 formatted timestamp"
   },
-  "body": "暗号化テキスト（Base64エンコード）"
+  "body": "Encrypted text (Base64 encoded)"
 }
 ```
 
-## **セキュリティについて**
+## **Security Information**
 
-- **パスワード管理**: パスワードはデータの復号に必要不可欠です。忘れないように安全に管理してください。
-- **クライアントサイド処理**: 暗号化・復号はすべてブラウザ内で行われ、サーバーに送信されることはありません。
-- **オープンソース**: ソースコードを公開しており、誰でもセキュリティを検証できます。
+- **Password Management**: Your password is essential for decrypting the data. Be sure to store it safely.
+- **Client-Side Processing**: All encryption and decryption are performed in the browser, with nothing sent to the server.
+- **Open Source**: The source code is available for anyone to inspect and verify security.
 
-## **開発者向け情報**
+## **Developer Information**
 
-### **ディレクトリ構成**
+### **Directory Structure**
 
 ```
 LockText/
-├── public/             # 公開ディレクトリ
-│   ├── index.html      # メインHTMLファイル
-│   ├── style.css       # スタイルシート
-│   └── app.js          # メインJavaScriptファイル
-├── src/                # ソースコード（必要に応じて）
-├── assets/             # 画像やアイコンなどのアセット
-├── .gitignore          # Gitの設定ファイル
-├── README.md           # このファイル
-└── LICENSE             # ライセンス情報
+├── public/             # Public directory
+│   ├── index.html      # Main HTML file
+│   ├── style.css       # Stylesheet
+│   └── app.js          # Main JavaScript file
+├── src/                # Source code (if needed)
+├── assets/             # Assets like images and icons
+├── .gitignore          # Git settings
+├── README.md           # This file
+└── LICENSE             # License information
 ```
 
-### **必要な環境**
+### **Requirements**
 
-- モダンなウェブブラウザ（Chrome、Firefox、Safari、Edgeなど）
-- Node.jsとnpm（開発・ビルドに必要な場合）
+- Modern web browser (Chrome, Firefox, Safari, Edge, etc.)
+- Node.js and npm (if needed for development or build)
 
-### **ビルドとデプロイ**
+### **Build and Deploy**
 
-特別なビルド手順は必要ありません。`public`ディレクトリ内のファイルをウェブサーバーに配置するだけで動作します。
+No special build steps are required. Simply place the files in the `public` directory on a web server to run the application.
 
-### **開発手順**
+### **Development Steps**
 
-1. **リポジトリのクローン**: 上記の手順を参照。
-2. **開発用サーバーの起動**: Live Serverやローカルサーバーを使用。
-3. **コードの編集**: `public`ディレクトリ内のファイルを編集。
-4. **プルリクエストの作成**: 改善点や新機能を提案する場合は、プルリクエストをお送りください。
+1. **Clone the repository**: See the steps above.
+2. **Start a development server**: Use Live Server or a local server.
+3. **Edit the code**: Modify the files in the `public` directory.
+4. **Create a Pull Request**: If you want to propose improvements or new features, please send a pull request.
 
-## **コントリビューション**
+## **Contributions**
 
-バグ報告、機能提案、プルリクエストなど、歓迎いたします。IssueやPull Requestを通じてご参加ください。
+Bug reports, feature suggestions, and pull requests are welcome. Please participate through Issues or Pull Requests.
 
-## **ライセンス**
+## **License**
 
-このプロジェクトは[MITライセンス](LICENSE)のもとで公開されています。
+This project is released under the [MIT License](LICENSE).
 
-## **連絡先**
+## **Contact**
 
-ご質問やご提案がありましたら、以下の方法でご連絡ください。
+If you have any questions or suggestions, please contact us through the following:
 
-- **メール**: ur68x6716@mozmail.com
-- **GitHub Issues**: [リポジトリのIssuesページ](https://github.com/gegege/LockText/issues)
+- **Email**: ur68x6716@mozmail.com
+- **GitHub Issues**: [Repository Issues Page](https://github.com/gegege/LockText/issues)
 
 ---
 
-**LockText**をお試しいただきありがとうございます。あなたの大切な情報を、安全かつ簡単に管理できることを願っています。
+Thank you for trying **LockText**. We hope it helps you manage your sensitive information safely and easily.
