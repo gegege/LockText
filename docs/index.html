@@ -39,8 +39,8 @@
         </ul>
         <textarea id="plaintext" class="w-full p-3 border border-gray-300 rounded mb-4" placeholder="暗号化したいテキストを入力"></textarea>
         <input type="password" id="password" class="w-full p-3 border border-gray-300 rounded mb-4" placeholder="パスワードを入力">
-        <input type="password" id="confirm-password" class="w-full p-3 border border-gray-300 rounded mb-4" placeholder="パスワードを再入力">
-        <button id="encrypt-btn" class="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-700">暗号化する</button>
+        <input type="password" id="password-confirm" class="w-full p-3 border border-gray-300 rounded mb-4" placeholder="パスワードを再入力">
+        <button id="encrypt-button" class="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-700">暗号化する</button>
     </section>
 
     <!-- 復号化セクション -->
@@ -52,9 +52,11 @@
             <li>パスワードを入力します。</li>
             <li>「復号化する」ボタンをクリックします。</li>
         </ul>
-        <textarea id="ciphertext" class="w-full p-3 border border-gray-300 rounded mb-4" placeholder="復号化したい暗号文を入力"></textarea>
+
+        <input type="file" id="encrypted-file" class="w-full p-3 border border-gray-300 rounded mb-4" placeholder="パスワードを入力">
         <input type="password" id="decrypt-password" class="w-full p-3 border border-gray-300 rounded mb-4" placeholder="パスワードを入力">
-        <button id="decrypt-btn" class="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-700">復号化する</button>
+        <button id="decrypt-button" class="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-700 mb-4">復号化する</button>
+        <textarea id="decrypted-text" readonly="readonly" class="w-full p-3 border border-gray-300 rounded mb-4" placeholder="復号化した暗号文"></textarea>
     </section>
 </main>
 <!-- プライバシーポリシーセクション -->
